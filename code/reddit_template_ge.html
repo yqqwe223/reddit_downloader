@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta name="msvalidate.01" content="5CCC6EE8FF816477D80A4DE459A738F1" />
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Reddit Video Downloader: Mit unserem Reddit Video Downloader können Sie beliebige Videos oder GIFs herunterladen und in das MP3- oder GIF-Format konvertieren. Worauf warten Sie noch? Probieren Sie unseren Reddit Video Downloader jetzt aus!">
+<meta name="keywords" content="Reddit Video Downloader, Reddit Videos herunterladen, Reddit GIF Downloader">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twittervideodownloaderx.com">
+<meta name="twitter:title" content="Reddit Video Downloader – Videos und GIFs von Reddit speichern">
+<meta name="twitter:description" content="Reddit Video Downloader: Nutzen Sie unser Tool, um beliebige Reddit-Videos oder GIFs herunterzuladen und sie in MP3 oder GIF zu konvertieren. Jetzt ausprobieren!">
+<meta name="twitter:image" content="https://twittervideodownloaderx.com/static/logo.png">
+<meta name="twitter:image:alt" content="Reddit Video Downloader – Videos und GIFs von Reddit speichern">
+
+<meta property="og:title" content="Reddit Video Downloader – Videos und GIFs von Reddit speichern" />
+<meta property="og:description" content="Reddit Video Downloader: Mit unserem Tool können Sie ganz einfach Reddit-Videos oder GIFs herunterladen und in MP3 oder GIF umwandeln. Probieren Sie es jetzt aus!" />
+<meta property="og:image" content="https://twittervideodownloaderx.com/static/logo.png" />
+<meta property="og:image:alt" content="Reddit Video Downloader – Videos und GIFs von Reddit speichern" />
+
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+<link href="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/wait.css" >
+<link rel="stylesheet" href="/static/shareon.min.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+{{websiteSchema|safe}}
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<title>Reddit Video Downloader – Videos und GIFs von Reddit speichern</title>
+</head>
+
+
+<body>
+
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #FF4500 0%, #FF6B35 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #FF4500;
+        }
+
+        .nav1 {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e9ecef;
+            overflow-x: auto;
+        }
+
+        .nav1 ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: #495057;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .nav1 a:hover {
+            background: #FF4500;
+            color: white;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #FF4500;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f8f9fa;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            color: #212529;
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h4 {
+            color: #FF4500;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tutorial-step {
+            background: #f0f7ff;
+            border-left: 4px solid #FF4500;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .step-number {
+            background: #FF4500;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .tip-box {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #FF4500;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: #6c757d;
+        }
+
+        .download-area {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px dashed #FF4500;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .download-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid #dee2e6;
+            border-radius: 25px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .download-input:focus {
+            outline: none;
+            border-color: #FF4500;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #FF4500 0%, #FF6B35 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,69,0,0.4);
+        }
+
+        .footer {
+            background: #212529;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #FF4500;
+            text-decoration: none;
+        }
+		
+
+		
+		
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .main-content {
+                padding: 25px 15px;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav1 ul {
+                justify-content: flex-start;
+            }
+
+            .nav1 a {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        /* 高对比度模式支持 */
+        @media (prefers-contrast: high) {
+            .header {
+                background: #FF4500;
+            }
+
+            .download-btn {
+                background: #FF4500;
+            }
+        }
+
+        /* 暗色模式支持 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            }
+
+            .container {
+                background: #1a202c;
+                color: #e2e8f0;
+            }
+
+            .nav1 {
+                background: #2d3748;
+                border-bottom-color: #4a5568;
+            }
+
+            .nav1 a {
+                color: #e2e8f0;
+            }
+
+            .section h2 {
+                border-bottom-color: #2d3748;
+            }
+
+            .feature-card {
+                background: #2d3748;
+            }
+
+            .tutorial-step {
+                background: #2d3748;
+            }
+
+            .faq-item {
+                background: #2d3748;
+                border-color: #4a5568;
+            }
+        }
+    </style>
+
+<div class="container-fluid text-break">
+<div class="row" style="background:linear-gradient(90deg, #FF4500 0%, #FF8717 100%);">
+<div class="row">
+    <div class="col-sm-2 d-none d-sm-block" >
+    </div>
+	<div class="col-sm-4 align-self-end"  >
+		<a href='https://twittervideodownloaderx.com' style="text-decoration:none"><img  data-src='/static/logo.png' src='/static/pix.jpg' class="img-fluid lazy align-text-bottom" alt='site logo'><span  class='align-text-bottom text-wrap fs-3' style="font-style:italic;color:white;font-family:'Tektur',sans-serif;">Twittervideodownloaderx</span></a>
+    </div>
+	
+	
+<div class="col-sm-4 d-flex justify-content-end align-items-center" id="webdes">
+		<ul  style='padding-top:25px;color:white'  class="nav nav-tabs" >
+			<li style='display:inline;'><a href='https://twittervideodownloaderx.com' style='text-decoration: none;color:white'>Startseite</a>&nbsp;&nbsp;</li>
+
+			<div class="text-end mb-3">
+				<div class="dropdown d-inline-block">
+					<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+							type="button"
+							id="langDropdown"
+							data-bs-toggle="dropdown"
+							aria-expanded="false">
+					<i class="fa-solid fa-video"></i>
+					<span>Video-Download-Tool</span>
+					</button>
+			
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						{{toollistele|safe}}
+					</ul>
+				</div>&nbsp;&nbsp;
+			</div>
+			
+			<div class="text-end mb-3">
+				<div class="dropdown d-inline-block">
+					<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+							type="button"
+							id="langDropdown"
+							data-bs-toggle="dropdown"
+							aria-expanded="false">
+					<i class="bi bi-globe"></i>
+					<span>🇩🇪 Deutsch</span>
+					</button>
+			
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						{{langlistele|safe}}
+					</ul>
+				</div>
+			</div>
+		</ul>
+	 </div>
+	<div class="col-sm-2" id='langweb' >
+	</div>
+</div>
+<div class="row" >
+    <div class="col-md-2 d-none d-md-block">
+    </div> 
+    <div class="col-md-8"  style="border-width:1px;border-style: solid;background-color:#F5F7FA">
+	
+	<br />
+		<div id='titleweb' style='text-align:center;color:#2D3E50' >
+			<h1 style='font-family: "Tektur",sans-serif;'>Reddit Video Downloader</h1>
+			<p >Kostenlos, schnell und ohne Installation – Reddit-Videos und GIFs einfach herunterladen</p>
+		</div> 
+		<div id='ad' >
+		</div>
+		<div style='text-align:center'>
+		
+		<input type='text' id='mainsource' style='width:80%;display:inline;color:#2D3E50' placeholder="https://www.reddit.com/r/..." >
+		</div>
+		<div style='text-align:center;color:#2D3E50'>
+		Beispiel-URL: https://www.reddit.com/r/funnyvideos/comments/1optk9q/she_did_not_deserve_that/
+		</div>
+		<br/>
+		<div style='text-align:center'>
+		
+		<button id='bigbutton' class="download-btn">🚀 Jetzt herunterladen</button>
+		
+		</div>
+		<br/>
+		
+		<div class="spinner-grow text-primary text-center" role="status" style='display:none;font-size:3em' id='loader'>
+			<span class="visually-hidden">Wird geladen...</span>
+		</div>
+		
+		<div class="" id='hashshow' style='color:#2D3E50'>
+		</div> 
+		<br />
+	</div>
+	<div class="col-md-2 d-none d-md-block">
+	</div>
+</div>
+<div class="row" >
+	<p>&nbsp;<span>{% csrf_token %}</span></p>
+</div>
+</div>
+
+<div class="row" style='margin-top:3em;background-color:#F5FAFB'>
+	<div class="col-sm-2 d-none d-md-block">
+	</div> 
+	<div class="col-sm-8"  >
+	
+
+ 
+<div class="container">
+ 
+
+        <!-- Navigationsmenü -->
+        <nav class="nav1">
+            <ul>
+                <li><a href="#intro">Einführung</a></li>
+                <li><a href="#features">Funktionen</a></li>
+                <li><a href="#how-to-use">Bedienungsanleitung</a></li>
+                <li><a href="#faq">Häufige Fragen</a></li>
+                <li><a href="#tips">Tipps</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hauptinhalt -->
+        <main class="main-content">
+            <!-- Einführungsabschnitt -->
+            <section id="intro" class="section">
+                <h2>📺 Über den Reddit-Video-Downloader</h2>
+                <p>Der Reddit-Video-Downloader ist ein leistungsstarkes Online-Tool, das speziell zum Herunterladen von Videos und animierten GIFs von der Reddit-Plattform entwickelt wurde. Egal, ob Sie beeindruckende Videoinhalte speichern oder unterhaltsame GIFs sammeln möchten – unser Tool macht es Ihnen kinderleicht.</p>
+                
+                <p>Unser Downloader läuft vollständig im Webbrowser. Es ist keine Software- oder Browsererweiterungs-Installation erforderlich. Er ist mit allen gängigen Browsern und Geräten kompatibel. Sobald Sie einen Reddit-Video-Link haben, können Sie innerhalb weniger Sekunden mit dem Download beginnen.</p>
+
+            </section>
+
+            <!-- Funktionen -->
+            <section id="features" class="section">
+                <h2>✨ Hauptmerkmale</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h4>Blitzschneller Download</h4>
+                        <p>Dank fortschrittlicher Download-Technologie können Sie Videos schnell herunterladen – ohne lange Wartezeiten.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💯</div>
+                        <h4>Hohe Qualität</h4>
+                        <p>Unterstützt Downloads in HD-Qualität und behält die ursprüngliche Bildqualität bei – für das beste Seherlebnis.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h4>Plattformübergreifend kompatibel</h4>
+                        <p>Perfekt nutzbar auf Desktop und Mobilgeräten – voll kompatibel mit iOS, Android, Windows und Mac.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h4>Sicher & datenschutzfreundlich</h4>
+                        <p>Keine Anmeldung erforderlich, keine personenbezogenen Daten gesammelt – anonym und sicher.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h4>Verschiedene Formate</h4>
+                        <p>Unterstützt verschiedene Formate wie MP4 und GIF – passend für unterschiedliche Anforderungen.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🆓</div>
+                        <h4>Vollständig kostenlos</h4>
+                        <p>Alle Funktionen sind gratis nutzbar – ohne Download-Limit und ohne versteckte Kosten.</p>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>💡 Hinweis:</strong> Unser Downloader unterstützt das Herunterladen von Videos mit Ton. Sie können zwischen reinem Video oder einer Kombination aus Video und Audio wählen.
+                </div>
+            </section>
+
+            <!-- Bedienungsanleitung -->
+            <section id="how-to-use" class="section">
+                <h2>📖 Detaillierte Anleitung</h2>
+                
+                <h3><span class="step-number">1</span>Reddit-Video-Link kopieren</h3>
+                <div class="tutorial-step">
+                    <p><strong>Methode 1: Aus der Browser-Adressleiste kopieren</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Öffnen Sie Reddit im Browser</li>
+                        <li>Suchen Sie den gewünschten Video-Beitrag</li>
+                        <li>Klicken Sie auf das Video, um die Detailseite zu öffnen</li>
+                        <li>Kopieren Sie die URL aus der Adressleiste</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Beispiel-Link:</strong> <code>https://www.reddit.com/r/.../comments/.../...</code></p>
+                </div>
+
+                <div class="tutorial-step">
+                    <p><strong>Methode 2: Aus der Reddit-App kopieren</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Öffnen Sie die Reddit-App auf Ihrem Smartphone</li>
+                        <li>Suchen Sie den gewünschten Video-Beitrag</li>
+                        <li>Tippen Sie auf „Teilen“</li>
+                        <li>Wählen Sie „Link kopieren“</li>
+                    </ul>
+                </div>
+
+                <h3><span class="step-number">2</span>Link in den Downloader einfügen</h3>
+                <div class="tutorial-step">
+                    <p>Fügen Sie den kopierten Reddit-Video-Link in das obere Eingabefeld dieser Seite ein und stellen Sie sicher, dass der Link vollständig und korrekt ist.</p>
+                </div>
+
+                <h3><span class="step-number">3</span>Download starten</h3>
+                <div class="tutorial-step">
+                    <p>Klicken Sie auf den Button „🚀 Download starten“. Das System analysiert automatisch die Videoinformationen und bereitet den Download vor.</p>
+                </div>
+
+                <h3><span class="step-number">4</span>Download-Option auswählen</h3>
+                <div class="tutorial-step">
+                    <p>Nach erfolgreicher Analyse können Sie wählen:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Video + Audio herunterladen:</strong> Komplette Videodatei</li>
+                        <li><strong>Nur Video:</strong> Videodatei ohne Ton</li>
+                        <li><strong>Nur Audio:</strong> MP3-Audiodatei</li>
+                        <li><strong>GIF herunterladen:</strong> Falls der Beitrag ein animiertes GIF ist</li>
+                    </ul>
+                </div>
+
+                <h3><span class="step-number">5</span>Datei speichern</h3>
+                <div class="tutorial-step">
+                    <p>Klicken Sie auf die entsprechende Download-Schaltfläche, wählen Sie einen Speicherort aus und warten Sie, bis der Download abgeschlossen ist.</p>
+                </div>
+            </section>
+
+            <!-- Häufige Fragen -->
+            <section id="faq" class="section">
+                <h2>❓ Häufig gestellte Fragen</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">F: Wo werden heruntergeladene Videos gespeichert?</div>
+                    <div class="faq-answer">A: Heruntergeladene Videos werden standardmäßig im Ordner „Downloads“ Ihres Geräts gespeichert. Sie können den Standard-Download-Ordner in den Browsereinstellungen ändern.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">F: Warum können manche Videos nicht heruntergeladen werden?</div>
+                    <div class="faq-answer">A: Mögliche Gründe: Das Video wurde gelöscht, der Beitrag ist privat, es gibt urheberrechtliche Einschränkungen oder der Link ist ungültig. Stellen Sie sicher, dass das Video normal abgespielt werden kann.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">F: Enthalten die heruntergeladenen Videos ein Wasserzeichen?</div>
+                    <div class="faq-answer">A: Nein. Unser Dienst fügt keinerlei Wasserzeichen hinzu – Sie erhalten die Originaldatei unverändert.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">F: Kann ich 4K-Videos herunterladen?</div>
+                    <div class="faq-answer">A: Ja, solange das Originalvideo in 4K-Qualität vorliegt, behält unser Downloader die ursprüngliche Auflösung bei.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">F: Wovon hängt die Download-Geschwindigkeit ab?</div>
+                    <div class="faq-answer">A: Die Geschwindigkeit hängt hauptsächlich von Ihrer Internetverbindung und der Antwortgeschwindigkeit der Reddit-Server ab.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">F: Kann ich den Downloader auf meinem Handy nutzen?</div>
+                    <div class="faq-answer">A: Selbstverständlich! Unser Downloader ist vollständig mit iOS- und Android-Geräten kompatibel – keine App-Installation erforderlich.</div>
+                </div>
+            </section>
+
+            <!-- Tipps -->
+            <section id="tips" class="section">
+                <h2>💡 Tipps & wichtige Hinweise</h2>
+                
+                <h3>🎯 Effizienztipps</h3>
+                <div class="tutorial-step">
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Massen-Download:</strong> Nutzen Sie mehrere Browser-Tabs, um mehrere Videos gleichzeitig vorzubereiten</li>
+                        <li><strong>Lesezeichen:</strong> Fügen Sie diese Seite zu Ihren Lesezeichen hinzu, um sie jederzeit schnell aufrufen zu können</li>
+                        <li><strong>Tastaturkürzel:</strong> Strg+V (Windows) oder Cmd+V (Mac) zum schnellen Einfügen des Links</li>
+                    </ul>
+                </div>
+
+                <h3>⚠️ Wichtige Hinweise</h3>
+                <div class="warning-box">
+                    <ul style="margin-left: 20px;">
+                        <li>Bitte respektieren Sie das Urheberrecht und geistige Eigentum der Ersteller</li>
+                        <li>Heruntergeladene Videos dürfen nur für persönliche Zwecke (Lernen, Anschauen) genutzt werden</li>
+                        <li>Nutzen Sie die Inhalte nicht kommerziell</li>
+                        <li>Beachten Sie die Nutzungsbedingungen von Reddit und geltende Gesetze</li>
+                        <li>Laden Sie ausschließlich öffentlich geteilte Inhalte herunter</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <strong>🔍 Link-Format prüfen:</strong> Stellen Sie sicher, dass der Link mit <code>https://www.reddit.com/</code> oder <code>https://v.redd.it/</code> beginnt, da sonst möglicherweise keine Erkennung erfolgt.
+                </div>
+
+                <h3>📱 Hinweise für Mobilgeräte</h3>
+                <div class="tutorial-step">
+                    <p><strong>iOS-Nutzer:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Verwenden Sie Safari, um diese Seite aufzurufen</li>
+                        <li>Heruntergeladene Videos werden in der „Dateien“-App gespeichert</li>
+                        <li>Sie können die Funktion „In Fotos speichern“ nutzen, um Videos in Ihre Fotomediathek zu übertragen</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px;"><strong>Android-Nutzer:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Wir empfehlen die Verwendung von Chrome</li>
+                        <li>Heruntergeladene Videos befinden sich normalerweise im Ordner „Downloads“</li>
+                        <li>Sie können die Videos in Ihrer Galerie anzeigen</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Technische Informationen -->
+            <section class="section">
+                <h2>🔧 Technische Details</h2>
+                
+                <h3>Unterstützte Browser</h3>
+                <div class="tutorial-step">
+                    <p>Unser Downloader ist mit allen modernen Browsern kompatibel:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Google Chrome (empfohlen)</li>
+                        <li>Mozilla Firefox</li>
+                        <li>Microsoft Edge</li>
+                        <li>Safari</li>
+                        <li>Opera</li>
+                        <li>Andere Chromium-basierte Browser</li>
+                    </ul>
+                </div>
+
+                <h3>Unterstützte Videoarten</h3>
+                <div class="tutorial-step">
+                    <ul style="margin-left: 20px;">
+                        <li>Native Reddit-Videos (v.redd.it)</li>
+                        <li>Reddit-GIFs</li>
+                        <li>Eingebettete externe Videos</li>
+                        <li>Video-Beiträge mit Ton</li>
+                        <li>Auf anderen Plattformen geteilte Reddit-Videos</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Kontakt -->
+            <section id="contact" class="section">
+                <h2>📞 Kontakt</h2>
+                <p>Wenn Sie während der Nutzung auf Probleme stoßen oder Vorschläge und Feedback haben, kontaktieren Sie uns bitte über folgende Kanäle:</p>
+                
+                <div class="features-grid" style="margin-top: 20px;">
+                    <div class="feature-card">
+                        <div class="feature-icon">📧</div>
+                        <h4>E-Mail</h4>
+                        <p>{{contactmail}}</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h4>Online-Chat</h4>
+                        <p>Werktags 9:00–18:00 Uhr</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🐛</div>
+                        <h4>Fehler melden</h4>
+                        <p>Fehlerberichte einreichen</p>
+                    </div>
+                </div>
+
+                <div class="tip-box" style="margin-top: 20px;">
+                    <strong>💬 Ihr Feedback ist uns wichtig!</strong> Ihre Anregungen helfen uns, unser Produkt kontinuierlich zu verbessern und besseren Service zu bieten.
+                </div>
+            </section>
+        </main>
+
+ 	<footer class="footer">
+		<p>© {{year_string}} Reddit Video Downloader. Alle Rechte vorbehalten.</p>
+		<p>Diese Seite steht in keiner offiziellen Verbindung zu Reddit, Inc. | 
+		<a href="/privacy-policy" style="color: #FF4500;">Datenschutzerklärung</a> | 
+		<a href="/terms-of-service" style="color: #FF4500;">Nutzungsbedingungen</a> | 
+		<a href="/about-us" style="color: #FF4500;">Über uns</a> | 
+		<a href="/contact-us" style="color: #FF4500;">Kontakt</a>
+		</p>
+		<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+			Dieses Tool dient ausschließlich für den persönlichen Gebrauch zu Lern- und Forschungszwecken. Die Nutzer tragen die volle rechtliche Verantwortung für die Verwendung.
+		</p>
+		<p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+			Das Herunterladen von urheberrechtlich geschützten Inhalten kann gegen geltende Gesetze und Vorschriften verstoßen. Bitte beachten Sie die lokalen Gesetze.
+		</p>
+	</footer>
+		
+		
+    </div>
+
+	</div>
+	<div class="col-sm-2 d-none d-md-block">
+	</div>
+</div>
+</div>
+<script src="/static/jquery.min.js"  crossorigin="anonymous"></script>
+<script src="/static/popper.min.js"  crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-3339068484857413" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="/static/jquery.lazy.min.js"></script>
+
+<script type="text/javascript" src="/static/shareon.iife.js" defer  init></script>
+<script>
+	$(function() {
+		$('.lazy').Lazy();
+	});
+</script>
+<script type="application/ld+json">
+	{
+	"@context": "http://schema.org/",
+	"@type": "Organization",
+	"url": "https://twittervideodownloaderx.com",
+	"logo": "https://twittervideodownloaderx.com/static/logo.png"
+	}
+</script>
+
+<script>
+function mp3turn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#mp3placeholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#mp3placeholder').append(spinner+'<br />Converting Video to Mp3</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getmp3', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#mp3placeholder').html('NO result');
+				return;
+				}
+			var mp3filepath=response.mp3filepath;
+			//alert(htimage);
+			$('#mp3placeholder').empty();
+			var intext='';
+			var intext='<a href="/'+mp3filepath+'" target="_blank" class="btn btn-danger">Download Video Mp3</a>';
+			$('#mp3placeholder').html(intext);
+			}
+		else{
+			$('#mp3placeholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+function gifturn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#gifplaceholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#gifplaceholder').append(spinner+'<br />Converting Video to Gif</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getgif', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#gifplaceholder').html('NO result');
+				return;
+				}
+			var giffilepath=response.giffilepath;
+			//alert(htimage);
+			$('#gifplaceholder').empty();
+			var intext='';
+			var intext='<a href="/'+giffilepath+'" target="_blank" class="btn btn-danger">Download Video GIF</a>';
+			$('#gifplaceholder').html(intext);
+			}
+		else{
+			$('#gifplaceholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+$(document).ready(function() {
+$("#mainsource").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#bigbutton").click();
+    }
+});
+$('#bigbutton').on('click',function(){
+	var inputvalue = $('#mainsource').val();
+	if (inputvalue==='')
+	{
+		return false;
+	}
+	$('#hashshow').empty();
+	var spinner='<div style="text-align:center;"><span style="font-size:1.5em;"><span style="background-color:#007FFF;" class="spinner-loader" ></span>';
+	$('#hashshow').append(spinner+'<br />Video laden</span></div>');
+	
+	//document.getElementById("loader").style.display = "block";
+
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getitem_reddit', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			document.getElementById("loader").style.display = "none";
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#hashshow').html('NO result');
+				return;
+				}
+				
+				
+				
+				
+				var v_thumbnail=encodeURI(response.v_thumbnail);//
+				
+				var v_title=response.v_title;//
+				var v_webpage_url=encodeURI(response.v_webpage_url);//
+				var v_duration_string=response.v_duration_string;//
+				
+				//var v_uploader_id=response.v_uploader_id;//
+				var v_uploader=response.v_uploader;//
+				//var v_uploader_url=encodeURI(response.v_uploader_url);//
+				var v_view_count=response.v_view_count;//
+				var v_like_count=response.v_like_count;//
+				var v_comment_count=response.v_comment_count;//
+				var v_repost_count=response.v_repost_count;//
+				var v_width=response.v_width;//
+				var v_height=response.v_height;//
+				
+				var v_upload_date=response.v_upload_date;//
+				var v_ext=response.v_ext;//
+				var v_resolution=response.v_resolution;//
+				var v_aspect_ratio=response.v_aspect_ratio;//
+				//var v_des=response.v_des;//
+				var v_url=response.v_url;//
+				
+				
+				var v_formats = response.formatslist;
+				var v_thumbnails =response.thumbnailslist;
+			
+
+			$('#hashshow').empty();
+			var intext='';
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>'+v_title+'</b></div><div><img src="'+v_thumbnail+'"  class="img-fluid" /></div>';
+			
+
+			var intext=intext+'</div><div class="col-sm-6 align-self-end" ><br /><br />';
+			
+			//var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+v_url+'">下载视频</a></div>';
+			
+			for (let i = 0; i < v_formats.length; i++) {
+			
+				turl=encodeURI(v_formats[i][0]);
+				tres=v_formats[i][1];
+				// Übersetzung: Video herunterladen
+				var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+turl+'">Video herunterladen (Auflösung '+tres+')</a></div>';
+			}
+			
+			var intext=intext+'<br />'
+			for (let i = 0; i < v_thumbnails.length; i++) {
+			
+				turl=encodeURI(v_thumbnails[i][0]);
+				tres=v_thumbnails[i][1];
+				// Übersetzung: Vorschaubild herunterladen
+				var intext=intext+'<div><i class="bi bi-file-image"></i> <a style="text-decoration:none" href="'+turl+'">Vorschaubild herunterladen (Auflösung '+tres+')</a></div>';
+			}
+			
+			var intext=intext+'</div></div><hr />';
+	
+			// Linke Spalte: Titel, Link, Dauer, Uploader, Datum, Aufrufe
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>Titel: </b>'+v_title+'</div><div><b>Webseiten-Link: </b>'+v_webpage_url+'</div><div><b>Dauer: </b>'+v_duration_string+'</div><div><b>Uploader: </b>'+v_uploader+'</div><div><b>Hochladedatum: </b>'+v_upload_date+'</div><div><b>Aufrufe: </b>'+v_view_count+'</div></div>';
+	
+			// Rechte Spalte: Likes, Kommentare, Reposts, Breite, Höhe, Format, Auflösung, Seitenverhältnis
+			var intext=intext+'<div class="col-sm-6" ><div><b>Likes: </b>'+v_like_count+'</div><div><b>Kommentare: </b>'+v_comment_count+'</div><div><b>Reposts: </b>'+v_repost_count+'</div><div><b>Breite: </b>'+v_width+'</div><div><b>Höhe: </b>'+v_height+'</div><div><b>Dateiformat: </b>'+v_ext+'</div><div><b>Auflösung: </b>'+v_resolution+'</div><div><b>Seitenverhältnis: </b>'+v_aspect_ratio+'</div></div></div>';
+
+			//var intext=intext+'<div class="row" ><div class="col-sm-12" ><div><b>视频简介: </b>'+v_des+'</div></div></div>';
+
+
+			var intext=intext+'<div class="row" >'+'<div class="shareon shadow bg-light bg-gradient"><a class="facebook" data-title="'+v_title+'" ><span  style="font-size:1em">facebook</span></a><a class="linkedin" data-title="'+v_title+'" ><span style="font-size:1em">linkedin</span></a>	<a class="mastodon" data-title="'+v_title+'"><span  style="font-size:1em">mastodon</span></a><a class="messenger" data-fb-app-id="0123456789012345" data-title="'+v_title+'"><span  style="font-size:1em">messenger</span></a><a class="pinterest" data-title="'+v_title+'"><span  style="font-size:1em“>pinterest</span></a><a class="reddit" data-title="'+v_title+'"><span  style="font-size:0.5em">reddit</span></a><a class="telegram" data-title="'+v_title+'"><span  style="font-size:1em">telegram</span></a><a class="twitter" data-title="'+v_title+'"><span  style="font-size:1em“>twitter</span></a><a class="viber" data-title="'+v_title+'"><span  style="font-size:1em">viber</span></a><a class="vkontakte" data-title="'+v_title+'"><span  style="font-size:1em">vkontakte</span></a><a class="whatsapp" data-title="'+v_title+'"><span  style="font-size:1em">whatsapp</span></a></div>';
+			
+			
+			var intext=intext+'</div>';
+			
+			//$('#hashshow').append('<div>'+'<img src="'+htsimage+'" />'+'</div>'+'<p>'+trunttext+'</p>');
+			$('#hashshow').html(intext);
+			}
+		else{
+			document.getElementById("loader").style.display = "none";
+			$('#hashshow').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('.droplang').click(function(e) {
+    e.preventDefault();
+    var selectedValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	if (selectedValue==='en')
+	{
+		window.location=domainname+'/{{baseurlstring}}';
+	}
+	else
+	{
+	window.location=domainname+'/{{baseurlstring}}_'+selectedValue;
+	}
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droptool').click(function(e) {
+    e.preventDefault();
+    var selectedtoolValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	var current_lang='{{lang}}';
+	
+	if (selectedtoolValue==='x_twitter')
+	{
+		if (current_lang==='en')
+			{
+			window.location=domainname;
+			}
+		else
+			{
+			window.location=domainname+'/'+current_lang;
+			}
+	}
+	else
+	{
+		if (current_lang==='en')
+		
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader';
+			}
+		else
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader_'+'{{lang}}';
+			}
+	}
+  });
+});
+</script>
+<script type="text/javascript">
+var sc_project=11698515; 
+var sc_invisible=1; 
+var sc_security="38970939"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+
+<link  rel="stylesheet" href='/static/wait.css' >
+</body>
+</html>
